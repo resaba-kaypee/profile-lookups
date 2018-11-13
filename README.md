@@ -31,16 +31,15 @@ var contacts = [
 
 function lookUpProfile(name, prop){
 // Only change code below this line
-for(let i = 0; i < contacts.length; i++){
-  if(contacts[i].firstName === name){
-    if(contacts[i].hasOwnProperty(prop)){
-      return contacts[i][prop];
-    } else if (!contacts[i].hasOwnProperty(prop)){
-      return "No such property";
-    }
-  }   
-} return "No such contact";
-// Only change code above this line
+    for(let i = 0; i < contacts.length; i++){
+        if(name === contacts[i].firstName){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop];
+            } else {
+                return "No such property";
+            }
+        }
+    } return "No such contact";
 }
 
 // Change these values to test your function
